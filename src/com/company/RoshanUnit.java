@@ -1,29 +1,12 @@
 package com.company;
 
-public class RoshanUnit extends SuperUnit
-{
+public class RoshanUnit extends BaseUnit {
 
-    private String whatRoshanSayAfterDeath;
-
-//  Constructor
-//  RoshanUnit obj always named as ROSHAN
-//  RoshanUnit obj always have UnitType as ROSHAN
-
-    RoshanUnit(String whatRoshanSayAfterDeath)
-    {
-        super("ROSHAN", UnitType.ROSHAN);
-        this.whatRoshanSayAfterDeath = whatRoshanSayAfterDeath;
-    }
-    RoshanUnit()
-    {
-        this("ARRR");
-    }
-
-//  all data about RoshanUnit obj to string
-//
-    @Override
-    public String toStringUnit()
-    {
-        return (super.toStringUnit() + "|After death say: " + this.whatRoshanSayAfterDeath);
+    RoshanUnit() {
+        super("ROSHAN", UnitType.ROSHAN, 600);
+        /**
+         *  Default unit speed(which depends on UNIT_MAGIC_NUMBER) of ROSHAN is too high, so I fixed it.
+         */
+        super.setUnitSpeed((int) (super.getUNIT_MAGIC_NUMBER() / 2));
     }
 }

@@ -1,6 +1,5 @@
 package com.company;
 
-public enum SpellName
-{
+public enum SpellName {
     FIREFLY, LANDMINE, BLINK
 }

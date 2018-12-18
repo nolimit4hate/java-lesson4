@@ -1,30 +1,45 @@
 package com.company;
 
-public abstract class HeroUnit extends SuperUnit
-{
+public abstract class HeroUnit extends BaseUnit {
 
-// adding field spellName;
-    protected SpellName spellName;
+    /**
+     * @param spellName is a name of spell what have all object what extends HeroUnit class
+     * spellName is ENUM.
+     */
+    private SpellName spellName;
 
-// constructor
-    HeroUnit(String nameHeroUnit)
-    {
+    // constructor
+    public HeroUnit(String nameHeroUnit) {
         super(nameHeroUnit, UnitType.HERO);
         spellName = null;
     }
-    HeroUnit()
-    {
+
+    public HeroUnit() {
         this("DefaultHero");
     }
 
-// get Spell Name of hero in SpellName type
-
-    protected SpellName getSpellName()
-    {
-        return this.spellName;
+    public SpellName getSpellName() {
+        return spellName;
     }
 
-// abstract method that give HeroUnit type obj spell
+    public void setSpellName(SpellName spellName) {
+        this.spellName = spellName;
+    }
+
+    @Override
+    public String toStringZero() {
+        return super.toStringZero() +
+                ", spellName=" + this.spellName;
+    }
+
+    @Override
+    public String toString() {
+        return this.toStringZero() + '}';
+    }
+
+    /**
+     * abstract method = all heroes must have a spell
+     */
     abstract void setHeroSpell();
 }
 
