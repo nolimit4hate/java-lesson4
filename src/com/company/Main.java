@@ -26,7 +26,10 @@ public class Main {
         HeroStrengthUnit newHeroStrength = new HeroStrengthUnit();
         System.out.println(newHeroStrength.toString());
         System.out.println(newCaster.castSpell(newHeroAgility));
-
-
+//test HeroSpellCast on Creep
+        newCaster.spellCastChangeUnit(newHeroAgility, newCreep1);
+        System.out.println(newHeroAgility.toString());
+        System.out.println(newCreep1.toString());
+        newCaster.spellCastChangeUnit(newHeroAgility, newCreep1);
     }
 }

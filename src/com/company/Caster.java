@@ -2,7 +2,9 @@ package com.company;
 
 public interface Caster {
     String castSpell(HeroUnit heroUnit);
-    int changeManaSpell(HeroUnit heroUnit);
-    int changeHPSpell(BaseUnit baseUnit);
-    int changeStatus(CreepUnit creepUnit);
+    void spellCastChangeUnit(HeroUnit heroUnit, CreepUnit creepUnit);
+
+//    void changeManaSpell(HeroUnit heroUnit, int value);
+//    void changeHPSpell(CreepUnit creepUnit, int value);
+//    void changeStatus(CreepUnit creepUnit, UnitStatus unitStatus);
 }

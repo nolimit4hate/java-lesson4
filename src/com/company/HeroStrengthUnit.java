@@ -44,7 +44,7 @@ public class HeroStrengthUnit extends HeroUnit {
 
     @Override
     public void setHeroSpell() {
-        this.setSpellName(SpellName.FIREFLY);
+        this.setSpellName(SpellName.BLINK);
     }
 
     @Override
